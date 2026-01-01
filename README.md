@@ -85,10 +85,12 @@ Example button:
 
 ---
 
-## ♿ Accessibility notes
+## ♿ Accessibility notes ✅
 
-- Buttons have clear labels and large click targets; however, consider adding `aria-pressed` or visually indicated focus states if you expand the UI.
-- If using custom colors, verify sufficient contrast for users with low vision.
+- Buttons now include `aria-pressed` to indicate the selected/toggled state to assistive technologies and `aria-label` for explicit action descriptions.
+- A visually hidden (`sr-only`) `aria-live="polite"` region announces the current background color change for screen reader users.
+- Focus styles improved using `focus-visible` ring utilities so keyboard users can see which element is focused (avoid removing the outline globally).
+- For high-contrast needs, the Yellow button uses black text to ensure readable contrast; verify other colors for accessibility when adding new presets.
 
 ---
 
